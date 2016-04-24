@@ -199,6 +199,7 @@
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TreeObservationsController.cs" />
     <Compile Include="Controllers\TreesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,11 +216,24 @@
     <Compile Include="Migrations\201604241859075_AquiredFrom.Designer.cs">
       <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604242247540_Observations.cs" />
+    <Compile Include="Migrations\201604242247540_Observations.Designer.cs">
+      <DependentUpon>201604242247540_Observations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604242302094_Key.cs" />
+    <Compile Include="Migrations\201604242302094_Key.Designer.cs">
+      <DependentUpon>201604242302094_Key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604242320553_unknown.cs" />
+    <Compile Include="Migrations\201604242320553_unknown.Designer.cs">
+      <DependentUpon>201604242320553_unknown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Tree.cs" />
+    <Compile Include="Models\TreeObservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -299,6 +313,11 @@
     <Content Include="Views\Trees\Details.cshtml" />
     <Content Include="Views\Trees\Edit.cshtml" />
     <Content Include="Views\Trees\Index.cshtml" />
+    <Content Include="Views\TreeObservations\Create.cshtml" />
+    <Content Include="Views\TreeObservations\Delete.cshtml" />
+    <Content Include="Views\TreeObservations\Details.cshtml" />
+    <Content Include="Views\TreeObservations\Edit.cshtml" />
+    <Content Include="Views\TreeObservations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,6 +339,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604241859075_AquiredFrom.resx">
       <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604242247540_Observations.resx">
+      <DependentUpon>201604242247540_Observations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604242302094_Key.resx">
+      <DependentUpon>201604242302094_Key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604242320553_unknown.resx">
+      <DependentUpon>201604242320553_unknown.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

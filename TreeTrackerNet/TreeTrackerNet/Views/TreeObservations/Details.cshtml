@@ -1,0 +1,66 @@
+﻿@model TreeTrackerNet.Models.TreeObservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TreeObservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tree.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tree.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateObserver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateObserver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Watered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Watered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fertalized)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fertalized)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrunkMeasurement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrunkMeasurement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

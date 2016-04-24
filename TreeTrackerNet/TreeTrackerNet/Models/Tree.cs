@@ -7,6 +7,7 @@ namespace TreeTrackerNet.Models
     public class Tree
     {
 
+        [Key]
         public int ID { get; set; }
 
         [Required]
@@ -30,5 +31,7 @@ namespace TreeTrackerNet.Models
     public class TreeDBContext : DbContext
     {
         public DbSet<Tree> Trees { get; set; }
+
+        public System.Data.Entity.DbSet<TreeTrackerNet.Models.TreeObservation> TreeObservations { get; set; }
     }
 }
