@@ -70,7 +70,7 @@ namespace TreeTrackerNet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Species,DateBought")] Tree tree)
+        public ActionResult Create([Bind(Include = "ID,Name,Species,DateBought,AquiredFrom")] Tree tree)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace TreeTrackerNet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Species,DateBought")] Tree tree)
+        public ActionResult Edit([Bind(Include = "ID,Name,Species,DateBought,AquiredFrom")] Tree tree)
         {
             if (ModelState.IsValid)
             {

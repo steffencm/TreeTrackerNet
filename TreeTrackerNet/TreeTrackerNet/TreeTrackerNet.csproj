@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201604210030250_Trees.Designer.cs">
       <DependentUpon>201604210030250_Trees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604241859075_AquiredFrom.cs" />
+    <Compile Include="Migrations\201604241859075_AquiredFrom.Designer.cs">
+      <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -313,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604210030250_Trees.resx">
       <DependentUpon>201604210030250_Trees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604241859075_AquiredFrom.resx">
+      <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

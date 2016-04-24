@@ -21,7 +21,10 @@ namespace TreeTrackerNet.Models
         [Display(Name = "Date Bought")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
-        public DateTime DateBought { get; set; } 
+        public DateTime DateBought { get; set; }
+        
+        [Display(Name="Aquired From")]
+        public string AquiredFrom { get; set; } 
     }
 
     public class TreeDBContext : DbContext
