@@ -15,9 +15,33 @@ namespace TreeTrackerNet.Controllers
         private TreeDBContext db = new TreeDBContext();
 
         // GET: Trees
-        public ActionResult Index()
+        public ActionResult Index(string treeSpecies, string searchString)
         {
-            return View(db.Trees.ToList());
+
+            var SpeciesList = new List<string>();
+
+            var SpeciesQry = from d in db.Trees
+                           orderby d.Species
+                           select d.Species;
+
+            SpeciesList.AddRange(SpeciesQry.Distinct());
+            ViewBag.treeSpecies = new SelectList(SpeciesList);
+
+            var trees = from tree in db.Trees
+                         select tree
+                         ;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                trees = trees.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(treeSpecies))
+            {
+                trees = trees.Where(x => x.Species == treeSpecies);
+            }
+
+            return View(trees);
         }
 
         // GET: Trees/Details/5
