@@ -15,9 +15,20 @@ namespace TreeTrackerNet.Controllers
         private TreeDBContext db = new TreeDBContext();
 
         // GET: TreeObservations
-        public ActionResult Index()
+        public ActionResult Index(int? treeId)
         {
-            var treeObservations = db.TreeObservations.Include(t => t.Tree);
+            var treeObservations = from observation in db.TreeObservations
+                                   select observation;
+            
+            if(treeId != null)
+            {
+                ViewBag.TreeName = db.Trees.Find(treeId).Name;
+                treeObservations = treeObservations.Where(x => x.TreeID == treeId);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
             return View(treeObservations.ToList());
         }
 
@@ -54,7 +65,7 @@ namespace TreeTrackerNet.Controllers
             {
                 db.TreeObservations.Add(treeObservation);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { treeId = treeObservation.TreeID });
             }
 
             ViewBag.TreeID = new SelectList(db.Trees, "ID", "Name", treeObservation.TreeID);
@@ -88,7 +99,7 @@ namespace TreeTrackerNet.Controllers
             {
                 db.Entry(treeObservation).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { treeId= treeObservation.TreeID });
             }
             ViewBag.TreeID = new SelectList(db.Trees, "ID", "Name", treeObservation.TreeID);
             return View(treeObservation);
@@ -117,7 +128,7 @@ namespace TreeTrackerNet.Controllers
             TreeObservation treeObservation = db.TreeObservations.Find(id);
             db.TreeObservations.Remove(treeObservation);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { treeId = treeObservation.TreeID });
         }
 
         protected override void Dispose(bool disposing)

@@ -4,17 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tree Observations for @ViewBag.TreeName</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Obsevation", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Tree.Name)
-        </th>
-        <th>
+       <th>
             @Html.DisplayNameFor(model => model.DateObserver)
         </th>
         <th>
@@ -34,9 +31,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tree.Name)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.DateObserver)
         </td>
