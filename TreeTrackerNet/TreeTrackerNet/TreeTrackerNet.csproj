@@ -194,10 +194,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Content\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="App_Start\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TreeObservationsController.cs" />
     <Compile Include="Controllers\TreesController.cs" />

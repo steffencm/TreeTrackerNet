@@ -23,6 +23,7 @@ namespace TreeTrackerNet.Controllers
             if(treeId != null)
             {
                 ViewBag.TreeName = db.Trees.Find(treeId).Name;
+                ViewBag.TreeId = treeId;
                 treeObservations = treeObservations.Where(x => x.TreeID == treeId);
             }
             else
@@ -48,9 +49,9 @@ namespace TreeTrackerNet.Controllers
         }
 
         // GET: TreeObservations/Create
-        public ActionResult Create()
+        public ActionResult Create(int? treeId)
         {
-            ViewBag.TreeID = new SelectList(db.Trees, "ID", "Name");
+            ViewBag.TreeID = treeId;
             return View();
         }
 
@@ -68,7 +69,7 @@ namespace TreeTrackerNet.Controllers
                 return RedirectToAction("Index", new { treeId = treeObservation.TreeID });
             }
 
-            ViewBag.TreeID = new SelectList(db.Trees, "ID", "Name", treeObservation.TreeID);
+            ViewBag.TreeID = treeObservation.TreeID;
             return View(treeObservation);
         }
 
