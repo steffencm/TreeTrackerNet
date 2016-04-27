@@ -7,7 +7,7 @@
 <h2>My Trees</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a new tree to your collection", "Create")
 
     @using (Html.BeginForm("Index", "Trees", FormMethod.Get))
     {
@@ -17,7 +17,6 @@
         <input type="submit" value="Filter" />
     </p>
     }
-    
 </p>
 <table class="table">
     <tr>
@@ -52,7 +51,6 @@
         </td>
         <td>
             @Html.ActionLink("Add Observation", "Create", "TreeObservations", new { treeId = item.ID}, new { }) 
-            @Html.ActionLink("See Observations", "Index", "TreeObservations", new { treeId = item.ID }, new { })
         </td>
     </tr>
 }
