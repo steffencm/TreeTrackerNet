@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<TreeTrackerNet.Models.Tree>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "My Trees";
 }
 
-<h2>Index</h2>
+<h2>My Trees</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,7 +13,7 @@
     {
     <p>
         Species: @Html.DropDownList("treeSpecies", "All")
-        Title: @Html.TextBox("SearchString") <br />
+        Title: @Html.TextBox("SearchString")
         <input type="submit" value="Filter" />
     </p>
     }
@@ -39,7 +39,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.ActionLink(item.Name, "Details", new {id=item.ID})
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Species)
@@ -51,11 +51,8 @@
             @Html.DisplayFor(modelItem => item.AquiredFrom)
         </td>
         <td>
-            @Html.ActionLink("Add Observation", "Create", "TreeObservations", new { treeId = item.ID}, new { }) |
-            @Html.ActionLink("See Observations", "Index", "TreeObservations", new { treeId = item.ID }, new { }) |
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Add Observation", "Create", "TreeObservations", new { treeId = item.ID}, new { }) 
+            @Html.ActionLink("See Observations", "Index", "TreeObservations", new { treeId = item.ID }, new { })
         </td>
     </tr>
 }
