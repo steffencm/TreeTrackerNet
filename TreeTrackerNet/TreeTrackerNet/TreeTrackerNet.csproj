@@ -204,31 +204,35 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604210007230_InitialCreate.cs" />
-    <Compile Include="Migrations\201604210007230_InitialCreate.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604210007230_InitialCreate.cs" />
+    <Compile Include="Scripts\Migrations\201604210007230_InitialCreate.Designer.cs">
       <DependentUpon>201604210007230_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604210030250_Trees.cs" />
-    <Compile Include="Migrations\201604210030250_Trees.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604210030250_Trees.cs" />
+    <Compile Include="Scripts\Migrations\201604210030250_Trees.Designer.cs">
       <DependentUpon>201604210030250_Trees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604241859075_AquiredFrom.cs" />
-    <Compile Include="Migrations\201604241859075_AquiredFrom.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604241859075_AquiredFrom.cs" />
+    <Compile Include="Scripts\Migrations\201604241859075_AquiredFrom.Designer.cs">
       <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604242247540_Observations.cs" />
-    <Compile Include="Migrations\201604242247540_Observations.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604242247540_Observations.cs" />
+    <Compile Include="Scripts\Migrations\201604242247540_Observations.Designer.cs">
       <DependentUpon>201604242247540_Observations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604242302094_Key.cs" />
-    <Compile Include="Migrations\201604242302094_Key.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604242302094_Key.cs" />
+    <Compile Include="Scripts\Migrations\201604242302094_Key.Designer.cs">
       <DependentUpon>201604242302094_Key.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604242320553_unknown.cs" />
-    <Compile Include="Migrations\201604242320553_unknown.Designer.cs">
+    <Compile Include="Scripts\Migrations\201604242320553_unknown.cs" />
+    <Compile Include="Scripts\Migrations\201604242320553_unknown.Designer.cs">
       <DependentUpon>201604242320553_unknown.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Scripts\Migrations\201604282342503_tree-image.cs" />
+    <Compile Include="Scripts\Migrations\201604282342503_tree-image.Designer.cs">
+      <DependentUpon>201604282342503_tree-image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IOCollection.cs" />
@@ -281,7 +285,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Trees\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -322,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Upload_Files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -332,23 +337,26 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604210007230_InitialCreate.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604210007230_InitialCreate.resx">
       <DependentUpon>201604210007230_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604210030250_Trees.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604210030250_Trees.resx">
       <DependentUpon>201604210030250_Trees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604241859075_AquiredFrom.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604241859075_AquiredFrom.resx">
       <DependentUpon>201604241859075_AquiredFrom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604242247540_Observations.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604242247540_Observations.resx">
       <DependentUpon>201604242247540_Observations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604242302094_Key.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604242302094_Key.resx">
       <DependentUpon>201604242302094_Key.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604242320553_unknown.resx">
+    <EmbeddedResource Include="Scripts\Migrations\201604242320553_unknown.resx">
       <DependentUpon>201604242320553_unknown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Migrations\201604282342503_tree-image.resx">
+      <DependentUpon>201604282342503_tree-image.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

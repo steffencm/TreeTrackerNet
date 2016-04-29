@@ -30,7 +30,10 @@ namespace TreeTrackerNet.Models
         [Display(Name="Aquired From")]
         public string AquiredFrom { get; set; }
         
-        public virtual ICollection<TreeObservation> observations { get; set; } 
+        public virtual ICollection<TreeObservation> observations { get; set; }
+     
+        [Display(Name= "Image")]   
+        public string ImagePath { get; set; }
         }
 
         public class TreeDBContext : DbContext

@@ -74,6 +74,14 @@ namespace TreeTrackerNet.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (Request.Files.Count == 0)
+                {
+                    return View(tree);
+                }
+                HttpPostedFileBase file = Request.Files[0];
+                var fileName = Guid.NewGuid().ToString();
+                file.SaveAs(Server.MapPath("~/Upload_Files/" + fileName));
+                tree.ImagePath = fileName;                
                 db.Trees.Add(tree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
