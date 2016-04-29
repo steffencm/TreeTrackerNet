@@ -234,3 +234,6 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+/Upload_Files
+/TreeTrackerNet/TreeTrackerNet/Upload_Files

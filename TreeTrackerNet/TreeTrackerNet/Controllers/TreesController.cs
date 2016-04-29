@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -79,8 +80,8 @@ namespace TreeTrackerNet.Controllers
                     return View(tree);
                 }
                 HttpPostedFileBase file = Request.Files[0];
-                var fileName = Guid.NewGuid().ToString();
-                file.SaveAs(Server.MapPath("~/Upload_Files/" + fileName));
+                var fileName = "~/Upload_Files/" + Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                file.SaveAs(Server.MapPath(fileName));
                 tree.ImagePath = fileName;                
                 db.Trees.Add(tree);
                 db.SaveChanges();
