@@ -20,6 +20,7 @@
 </p>
 <table class="table">
     <tr>
+        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -37,6 +38,15 @@
 
 @foreach (var item in Model) {
     <tr>
+        @{
+            if(String.IsNullOrEmpty(item.ImagePath)){
+                <td></td>
+            }
+            else{
+                <td><img src="@Url.Content(item.ImagePath)" alt="image" height="75px" width="75px"/></td>       
+            }
+        }
+        
         <td>
             @Html.ActionLink(item.Name, "Details", new {id=item.ID})
         </td>
