@@ -6,7 +6,11 @@
 
 <div>
     <center><h2>@Html.DisplayFor(model => model.Name)</h2></center>
-    <center><img src="@Url.Content(Model.ImagePath)" alt="image" /></center>
+    @{ if (!String.IsNullOrEmpty(Model.ImagePath))
+        {
+        <center><img src="@Url.Content(Model.ImagePath)" alt="image" /></center>
+        }
+    }
     <hr />
     <dl class="dl-horizontal">
         <dt>
