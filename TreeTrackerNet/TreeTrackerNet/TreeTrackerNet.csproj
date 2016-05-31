@@ -324,6 +324,10 @@
     <Content Include="Views\TreeObservations\Details.cshtml" />
     <Content Include="Views\TreeObservations\Edit.cshtml" />
     <Content Include="Views\TreeObservations\Index.cshtml" />
+    <Content Include="Views\TreeObservations\_ViewStart.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
+    <Content Include="Views\Manage\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
